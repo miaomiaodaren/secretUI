@@ -1,6 +1,6 @@
 {
   "name": "ffdesign",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "ff Design",
   "main": "lib/index.js",
   "module": "esm/index.js",
