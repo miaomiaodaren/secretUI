@@ -20,8 +20,11 @@ function main() {
     });
   }
   fs.mkdirSync(`${process.cwd()}/src/${upperName}`);
-  fsextra.copy(`${__dirname}/template`, `${process.cwd()}/src/${upperName}`);
-  replaceUpperName()
+  fsextra.copy(`${__dirname}/template`, `${process.cwd()}/src/${upperName}`).then(err => {
+    setTimeout(() => {
+      replaceUpperName()
+    }, 200);
+  })
 }
 
 function replaceUpperName() {
@@ -32,7 +35,7 @@ function replaceUpperName() {
     'demo/basic.tsx'
   ];
   taskList.forEach(task => {
-    const url = path.resolve(inputPath, task)
+    const url = path.resolve(inputPath, `../../src/${upperName}/${task}`)
     let files = fs.readFileSync(url, 'utf-8')
     let result = files.replace(/{{upperName}}/g, upperName);
     fs.writeFileSync(url, result, 'utf8')

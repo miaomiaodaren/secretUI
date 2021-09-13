@@ -1,10 +1,10 @@
 import React from "react";
 
-const prefixCls = 'UseForm';
+const prefixCls = '{{upperName}}';
 
 
-const UseForm = () => {
-  return <div className={prefixCls}>UseForm</div>
+const {{upperName}} = () => {
+  return <div className={prefixCls}>{{upperName}}</div>
 }
 
-export default UseForm
+export default {{upperName}}

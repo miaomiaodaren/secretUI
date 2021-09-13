@@ -8,8 +8,8 @@ var useSize = function useSize(_ref) {
   var _useState = useState(function () {
     var el = target;
     return {
-      width: el.clientWidth,
-      height: el.clientHeight
+      width: (el || {}).clientWidth,
+      height: (el || {}).clientHeight
     };
   }),
       _useState2 = _slicedToArray(_useState, 2),

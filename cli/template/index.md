@@ -1,5 +1,5 @@
 ---
-title: UseForm
+title: {{upperName}}
 nav:
   title: Hooks
   path: /hooks

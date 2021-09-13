@@ -1,5 +1,5 @@
 import React from 'react';
-import UseForm from '../';
+import {{upperName}} from '../';
 import '../style';
 
-export default () =>  <UseForm></UseForm>
+export default () =>  <{{upperName}}></{{upperName}}>

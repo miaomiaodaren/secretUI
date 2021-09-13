@@ -28,8 +28,8 @@
     var _useState = (0, _react.useState)(function () {
       var el = target;
       return {
-        width: el.clientWidth,
-        height: el.clientHeight
+        width: (el || {}).clientWidth,
+        height: (el || {}).clientHeight
       };
     }),
         _useState2 = (0, _slicedToArray2["default"])(_useState, 2),

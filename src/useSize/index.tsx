@@ -16,8 +16,8 @@ const useSize = ({ target }: Tprops): { width: number; height: number } => {
   const [state, setState] = useState(() => {
     const el = target;
     return {
-      width: (el as HTMLElement).clientWidth,
-      height: (el as HTMLElement).clientHeight,
+      width: ((el || {}) as HTMLElement).clientWidth,
+      height: ((el || {}) as HTMLElement).clientHeight,
     };
   });
   useLayoutEffect(() => {

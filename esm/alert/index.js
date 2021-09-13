@@ -1,5 +1,6 @@
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { Input } from 'antd';
 var prefixCls = 'happy-alert';
 
 var Alert = function Alert(_ref) {
@@ -17,7 +18,12 @@ var Alert = function Alert(_ref) {
   return /*#__PURE__*/React.createElement("div", {
     className: prefixCls,
     onClick: testAlert
-  }, "test Alert", text);
+  }, "test Alert", text, /*#__PURE__*/React.createElement(Input, {
+    value: 1,
+    onChange: function onChange(e) {
+      return console.log(e.target.value);
+    }
+  }));
 };
 
 export default Alert;

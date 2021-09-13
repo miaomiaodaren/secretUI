@@ -2,17 +2,17 @@ var _typeof = require("@babel/runtime/helpers/typeof");
 
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "@babel/runtime/helpers/slicedToArray", "react"], factory);
+    define(["exports", "@babel/runtime/helpers/slicedToArray", "react", "antd"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("@babel/runtime/helpers/slicedToArray"), require("react"));
+    factory(exports, require("@babel/runtime/helpers/slicedToArray"), require("react"), require("antd"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.slicedToArray, global.react);
+    factory(mod.exports, global.slicedToArray, global.react, global.antd);
     global.index = mod.exports;
   }
-})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_exports, _slicedToArray2, _react) {
+})(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : this, function (_exports, _slicedToArray2, _react, _antd) {
   "use strict";
 
   var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
@@ -45,7 +45,12 @@ var _typeof = require("@babel/runtime/helpers/typeof");
     return /*#__PURE__*/_react["default"].createElement("div", {
       className: prefixCls,
       onClick: testAlert
-    }, "test Alert", text);
+    }, "test Alert", text, /*#__PURE__*/_react["default"].createElement(_antd.Input, {
+      value: 1,
+      onChange: function onChange(e) {
+        return console.log(e.target.value);
+      }
+    }));
   };
 
   var _default = Alert;
